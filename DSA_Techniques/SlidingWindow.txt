@@ -1,0 +1,10 @@
+Sliding window is technique when we have to make a window of contiguos elements and that window keeps on sliding towards right or left.
+When to use:- 
+     1-Used only when the size of the window is given
+     2-if not size then atleast some condition is given, and 
+     3-when you have only the positive integers. 
+(if no size or condition given then go for Kadane's Algorithm)
+If questions ask to find - subarray of size K, substring, or contigues elements/
+There are two types of SW:-
+Fixed SW
+and Dynamic SL
