@@ -38,3 +38,5 @@ at end :- for both it will O(n)
 
 4- ease of use:- 
 arrays are lot easier to manage and LL has segmentations, pointers management so a little less.
+
+02-February-2026
