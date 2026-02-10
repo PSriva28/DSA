@@ -4,11 +4,9 @@
 // from tail - insertion/deletion will take O(n) as we have traverse till the last node and then insert/delete;
 // from head - it will take O(1), as we just have to change the links.
  
-//a part
+//b part
 
-// import java.lang.classfile.instruction.ReturnInstruction;
-
-public class stackWithLinkedList {
+public class stackWithLinkedListTail {
     static class Node{ //<-------------------------------------NODE CLASS BEGINS
         int val;Node next;
         Node(int val){ //<------------------------------Node constructor
@@ -16,42 +14,56 @@ public class stackWithLinkedList {
             this.next= null;
         }
     }//------------------------------------------------->NOODE CLASS ENDS
-
-    static class Stack{//<--------------------------------------STACK CLASS BEGINS
-        private Node top;
-        Stack(){//---------------------------------------Stack constructor
-            top = null;
-        }
-        void insertion(int val){//-----------------------1- insertion
+        private Node head;
+        int insertion(int val){//-----------------------1- insertion
             Node newnode = new Node(val);
-            newnode.next = top;//------------------------mtlb purane top ka address store krna newnode ke address mai fir top mai newnode dalna
-            top = newnode;
-            System.out.println(top+" -> "+top.val+" -> "+top.next);
-            return;
+            Node temp = head;
+            if(head == null){
+                head = newnode;
+                return newnode.val;
+            }
+            while(temp.next != null){
+                temp = temp.next;
+            }
+            temp.next = newnode;
+            return newnode.val;
         }
 
         int removal(){//---------------------------------2- removal
-            if(isEmpty()){
+            if(head == null){
                 return -1;
             }
-            int poppedval = top.val;
-            top = top.next;
-            return poppedval;
+            if(head.next == null){
+                int value = head.val;
+                head = null;
+                return value;
+            }
+            Node temp = head;
+            while(temp.next.next != null){
+                temp = temp.next;
+            }
+            int value = temp.next.val;
+            temp.next = null;
+            return value;
         }
 
         int peek(){//------------------------------------3- top element
-            if(isEmpty()){
+            if(head == null){
                 return -1;
             }
-            return top.val;
+            Node temp = head;
+            while(temp.next != null){
+                temp = temp.next;
+            }
+            int value = temp.val;
+            return value;
         }
 
         boolean isEmpty(){//-----------------------------4- checking if stack is empty
-            return top == null;
+            return head == null;
         }
-    }//-------------------------------------------------->STACK CLASS ENDS
     public static void main(String[] args) {
-        Stack st = new Stack();
+        stackWithLinkedListTail st = new stackWithLinkedListTail();
         System.out.println("Top Element-"+st.peek());
         System.out.println("Stack Empty? "+st.isEmpty());
         st.insertion(1);
@@ -63,5 +75,4 @@ public class stackWithLinkedList {
         System.out.println("Top Element-"+st.peek());
         System.out.println("Stack Empty? "+st.isEmpty());
     }
-    
 }
