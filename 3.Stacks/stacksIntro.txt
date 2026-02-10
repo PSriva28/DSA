@@ -1,0 +1,19 @@
+Stacks Data Structure
+- they are abstract data types
+real life scenarios are- from the stack of plates, we first pickup the first plate which is apprently kept at the last. 
+                        2- three balls present in container, you will pick the top ball which is apprently kept at the last;
+In short, Last In First Out - LIFO based
+
+Stack = a list with the restriction that the insertion and the deletion can happen from one end only that is top.
+
+Insertion happens through push and deletions happen through pop
+other methods are isEmpty - to check if the stack is empty or not, Top/peek - to return the last of the stack
+
+Applications where stack can be used - 
+1- undoing in the editor. ctrl+z 
+2- balancing brackets
+3- function calls/recursion
+
+Implementation - 
+1- Array 
+2 - Linked List

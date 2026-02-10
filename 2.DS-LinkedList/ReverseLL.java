@@ -22,7 +22,13 @@ public class ReverseLL {
     }
 
     void reverse(){
-        
+        Node curr = head;
+        Node prev = null;
+        while(curr.next!=null){
+            Node next = curr.next;
+            prev = curr;
+            
+        }
     }
 
     void display(){
