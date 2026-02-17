@@ -1,0 +1,22 @@
+ArrayList- can change its size dynamically as elements is removed or added. Unlike arrays, which are of fixed size, it has no fixed size
+
+Internal Working on ArrayList
+-> ArrayList is array only, its just when its initial capacity if filed, it will increase the size by 1.5 times of the original array.
+
+1-Jab koi elements Add hota hai toh -
+        i - check karega ki initial capacity kya fill ho gayi hai, jo ki 10 by default hota hai. agar space enough hogi nhi toh add element nhi hoga phele
+        ii - if there is not enough space to add the element, it will resize and form a new array = 1.5 times the original array
+        iii - then after adding first old elements it will add the new element. 
+
+        (size v/s capacity - size mtlb actual size kya hai array ki aur capacity mtlb kitna store kr sakta hai, default 10 hai jo ki change kr sakte hai)
+
+2- Resizing the array - 
+        i - initial capacity - 10, it can hold upto 10 elements before it needs to be resized
+        ii - growth factor - original array full ho gaya toh fir 1.5 time bigger hm new array create krte hai
+        iii - old elements from the old array is copied into the new array which takes O(n) operation
+
+3- Removing the elements
+        i - check bounds - check karega ki element valid range hai bhi, pta chala 10 ka array hai aur aapko 100va element remove krna hai 
+        ii- remove element - beech ka koi element remove hua toh next elements ek ek index aage jayega
+        iii- reduce size - size decrease hoga by 1 if one element is removed
+------------------------------------------------------------------------------------------------------------------------------

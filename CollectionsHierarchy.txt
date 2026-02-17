@@ -1,0 +1,55 @@
+Iterable
+   │
+Collection
+   ├── List
+   │     ├── ArrayList
+   │     ├── LinkedList
+   │     ├── Vector
+   │     │     └── Stack
+   │     └── CopyOnWriteArrayList
+   │
+   ├── Set
+   │     ├── HashSet
+   │     │     └── LinkedHashSet
+   │     ├── SortedSet
+   │     │     └── NavigableSet
+   │     │            └── TreeSet
+   │     ├── EnumSet
+   │     └── CopyOnWriteArraySet
+   │
+   └── Queue
+         ├── PriorityQueue
+         ├── Deque
+         │     ├── ArrayDeque
+         │     ├── LinkedList
+         │     └── ConcurrentLinkedDeque
+         │
+         ├── BlockingQueue
+         │     ├── ArrayBlockingQueue
+         │     ├── LinkedBlockingQueue
+         │     ├── PriorityBlockingQueue
+         │     ├── DelayQueue
+         │     └── SynchronousQueue
+         │
+         └── BlockingDeque
+               └── LinkedBlockingDeque
+
+
+
+Map (Separate Hierarchy)
+   ├── HashMap
+   │     └── LinkedHashMap
+   │
+   ├── SortedMap
+   │     └── NavigableMap
+   │            └── TreeMap
+   │
+   ├── Hashtable
+   │     └── Properties
+   │
+   ├── WeakHashMap
+   ├── IdentityHashMap
+   ├── EnumMap
+   ├── ConcurrentMap
+   │     └── ConcurrentHashMap
+   └── ConcurrentSkipListMap
